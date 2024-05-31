@@ -1,49 +1,54 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8"/>
-  <title>Lab_3</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "header header header"
+            "nav content aside"
+            "footer footer footer"
+        }
+        .header{
+            grid-area: header;
+            height: 15vh;
+            background-color: greenyellow;
+        }
+        .nav{
+            grid-area: nav;
+            height: 70vh;
+            background-color: red;
+        }
+        .content{
+            grid-area: content;
+            height: 70vh;
+            background-color: lightskyblue;
+        }
+        .aside{
+            grid-area: aside;
+            height: 70vh;
+            background-color: pink;
+        }
+        .footer{
+            grid-area: footer;
+            height: 15vh;
+            background-color: crimson;
+        }
+    </style>
 </head>
 <body>
-<img src=".\images\ducati.jpg"> 
-<a href="https://rtc.edu/"><img src=".\kotiki\kotik1.jpg"></a><br>
-
-
-<table border="2">
-<thead>
-<tr>
-<th colspan="3">Names</th>
-</tr>
- <tr>	
-	<th>Units</th>
-	<th>Cats</th>
-	<th>Ducati</th>
- </tr>
-</thead>
-
-<tbody>
- <tr>
-	<td rowspan="3">Amount</td>
-	<td>5 cats</td>
-	<td>2 bikes</td>
- </tr>
-<tr>
-	<td>2 cats</td>
-	<td>7 bikes</td>
-</tr>
- <tr>
-	<td>5 cats</td>
-	<td>9 bikes</td>
- </tr>
-</tbody>
-
-</table>
-<br>
-<iframe src="https://virustotal.com" width="600" height="400"></iframe> 
-
-
+    <div class="grid-container">
+        <header class="header">Header</header>
+        <nav class="nav">Navigator</nav>
+        <main class="content">Main Content</main>
+        <aside class="aside">Sidebar</aside>
+        <footer class="footer">Footer</footer>
+    </div>
 </body>
 </html>
-
